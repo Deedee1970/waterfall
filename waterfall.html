@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="reset.css">
+
+    <title>Waterfall</title>
+    <style>
+        .container {
+            text-align: center;
+            z-index: -1;
+        }
+
+        #waterfall_crop {
+            height: 180px;
+            width: 160px;
+            opacity: .2;
+            position: absolute;
+            top: 120px;
+            left: 130%;
+            z-index: 1;
+            animation: moveIt 4.7s infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        #waterfall_crop2 {
+            height: 180px;
+            width: 160px;
+            opacity: .2;
+            position: absolute;
+            top: 120px;
+            left: 130%;
+            z-index: 1;
+            animation: moveIt 1.5s infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        #waterfall_crop3 {
+            height: 180px;
+            width: 160px;
+            opacity: .2;
+            position: absolute;
+            top: 120px;
+            left: 130%;
+            z-index: 1;
+            animation: moveIt 3.6s infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes moveIt {
+            25% {
+                top: 120px;
+            }
+
+            100% {
+                width: 195px;
+                top: 430px;
+            }
+        }
+
+        @media screen and (min-width: 600px) {
+            #waterfall_crop {
+                left: 53%;
+            }
+
+            #waterfall_crop2 {
+                left: 53%;
+            }
+
+            #waterfall_crop3 {
+                left: 53%;
+            }
+
+            @keyframes moveIt {
+                25% {
+                    top: 120px;
+                }
+
+                100% {
+                    width: 195px;
+                    top: 430px;
+                    left: 52%;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img class="img-responsive" src="waterfall.jpg" alt="Waterfall">
+        <img id="waterfall_crop" src="waterfall3.jpg">
+        <img id="waterfall_crop2" src="waterfall3.jpg">
+        <img id="waterfall_crop3" src="waterfall3.jpg">
+    </div>
+    <audio controls autoplay loop>
+        <source src="mixkit-waterfall-ambience-2513.wav" />
+    </audio>
+    <iframe src="mixkit-waterfall-ambience-2513" allow="autoplay" style="display:none" id="iframeAudio">
+    </iframe>
+</body>
+
+</html>
